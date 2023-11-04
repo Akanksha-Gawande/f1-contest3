@@ -1,8 +1,15 @@
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    padding: 13px 108px;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
 
 }
 * {
@@ -52,8 +59,10 @@ nav {
     width: 100vw;
     height: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     box-sizing: border-box;
+    margin-top: 80px;
+    padding-top: 10px;
 
 }
 .hero-list {
@@ -83,7 +92,19 @@ border-radius: 8px;
 gap: 2px;
 
 }
+.love>h6 {
+ color: #525252;
+ font-size: 10px;
+ font-weight: 400;
+ line-height: 21px;
+ text-align: center;
+ align-items: center;
+ margin-left: 15px;
+ word-wrap: break-word;
+}
 .love {
+    width: 261px;
+    height: 41px;
     text-align: center;
     font-weight: 700;
     font-size: 16px;
@@ -96,6 +117,14 @@ gap: 2px;
     padding: 10px 15px;
     background: rgb(255, 255, 255);
     border-radius: 23px;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+.hero-section-col2 {
+    width: 415px; 
+    height: 430px;
+    background: white; 
+    box-shadow: 0px 25px 54px rgba(0, 0, 0, 0.12);
 }
 .col2-text > h3 {
 color: #2B2F34;
@@ -137,17 +166,30 @@ font-weight: 500;
 line-height: 24px;
 word-wrap: break-word
 }
-.btn {
-    background-color: #5856d6;
+.form>.btn {
+    background: linear-gradient(280deg, #992FED 0%, #2F80ED 100%); 
     color: white;
-font-size: 18px;
-font-family: Satoshi;
-font-weight: 700;
-line-height: 27px;
-word-wrap: break-word
+    font-size: 18px;
+    font-family: Satoshi;
+    font-weight: 700;
+    line-height: 27px;
+    word-wrap: break-word
+}
+.aggrement>span {
+    color: #2F80ED;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.aggrement {
+    color: #818D9D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-top: 20px;
 }
 .card {
-    box-shadow: 5px 5px #9393d1
+    box-shadow: 5px 5px #9393d1;
 }
 
 
@@ -293,11 +335,11 @@ letter-spacing:  -0.63px;
 
     justify-content: space-between;
     align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
 }
 .nav-links {
     display: flex;
@@ -319,15 +361,7 @@ letter-spacing:  -0.63px;
     letter-spacing: 0.16px;
     text-decoration: none;
 }
-.nav-button-login {
-    border-radius: 8px;
-    display: flex;
-    padding: 15px 36px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border: 2px solid var(--primaryskyblue, #2f80ed);
-}
+
 .announcement-text {
     color: #fff;
     font-family: ABeeZee;
@@ -339,8 +373,8 @@ letter-spacing:  -0.63px;
 }
 .announcement {
     margin-top: 80px;
-padding: 8px;
-text-align: center;
+    padding: 8px;
+    text-align: center;
     align-items: flex-start;
     gap: 10px;
     background: var(--primaryskyblue, #2f80ed);
@@ -510,7 +544,7 @@ text-align: center;
     font-size: 32px;
     font-style: italic;
     font-weight: 400;
-    line-height: 150%; /* 48px */
+    line-height: 150%; 
     letter-spacing: -0.48px;
 }
 .hero-form-frame-section1-lower {
@@ -678,7 +712,6 @@ text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    /* 21px */
     margin-left: 100px;
 }
 
@@ -831,7 +864,6 @@ a {
 
 .element-course-we-offer {
     position: relative;
-    /* width: 1440px; */
     height: 864px;
     background-color: #ebf7ff;
     overflow: hidden;
@@ -1147,7 +1179,7 @@ a {
     white-space: nowrap;
 }
 
-.element-course-we-offer .button {
+.element-course-we-offer .CTA-button {
     display: flex;
     width: 210px;
     align-items: center;
@@ -1231,4 +1263,42 @@ a {
     font-size: 16px;
     letter-spacing: 0;
     line-height: normal;
+}
+@media screen and (max-width:480px) {
+    .main-nav {
+        display: flex;
+        flex-direction: column!important;
+
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-section {
+        display: flex;
+        flex-direction: column!important;
+        margin-top: 150px!important;
+        text-align: left;
+        margin-bottom: 60px;
+        padding-top: 60px;
+    }
+    .hero-section-col2 {
+        display: flex;
+        text-align: left!important;
+    }
+    .element-course-we-offer {
+        display: flex;
+        text-align: left;
+        margin-top: 40px;
+        padding-top: 30px;
+
+    }
+    .footer {
+        display: flex;
+        flex-direction: column!important;
+    }
+    .course-cards {
+        display: flex;
+        flex-direction: column!important;
+    }
 }
